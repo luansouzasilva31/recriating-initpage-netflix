@@ -1,0 +1,114 @@
+:root{
+    --vermelho: #e50914;
+    --preto: #141414;
+    --cinza: #AAA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*proibe deformação do box*/
+}
+
+/*ELEMENTOS BASE:::*/
+body{
+    background: var(--preto);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header .container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row; /*PADRÃO*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--cinza);
+    margin-right: 10px;
+    transition: .2s ease all;
+}
+
+header nav a:hover{
+    color:#fff;
+}
+
+/*FILME PRINCIPAL:::*/
+.filme-principal{
+    font-size: 16px;
+    /*Linear gradient pede sempre 2 parâmetros. Cria uma camada fina em cima da imagem, escurecendo-a um pouco.*/
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%) ,url('../img/capa.jpg');
+    height: 400px;
+    background-size: cover; /* A img se adapta ao container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer; /*Quando sob o elemento, o ponteiro vira mãozinha*/
+    transition: .3s ease all; /*Adiciona efeito de transição no element*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{ /*AFETA "container" E TODOS OS ELEM. FILHOS*/
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.filme-principal .container{ /*NÃO AFETA OS FILHOS DE "container" !!!*/
+    width: 70%;
+}
+
+
+.box-filme{
+    height: 100%; /*altura natural da img*/
+    width: 100%; /*largura natural da img*/
+    display: block;
+}
+
+.item{
+    cursor: pointer;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
